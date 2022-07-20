@@ -1,6 +1,12 @@
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 import Theme from './theme';
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+`;
 
 const Layout = styled.div.attrs({
   className: 'grid, min-h-screen',
@@ -11,7 +17,8 @@ const Layout = styled.div.attrs({
 const SkilledLayout = () => {
   return (
     <ThemeProvider theme={Theme}>
-      <Layout>My layout</Layout>;
+      <Layout>My layout</Layout>
+      <GlobalStyle />
     </ThemeProvider>
   );
 };

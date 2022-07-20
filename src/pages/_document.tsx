@@ -8,7 +8,14 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang={AppConfig.locale}>
-        <Head />
+        <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin=""
+          ></link>
+        </Head>
         <body>
           <Main />
           <NextScript />
